@@ -1,0 +1,12 @@
+api = "0.2"
+
+[buildpack]
+id = "heroku/spring-boot"
+version = "0.1"
+name = "Spring-Boot"
+
+[[stacks]]
+id = "heroku-18"
+
+[[stacks]]
+id = "io.buildpacks.stacks.bionic"

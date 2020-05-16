@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cat <<TOML > $1/launch.toml
+[[processes]]
+type = "web"
+command = "java -cp \"${CLASSPATH}\" ${JAVA_OPTS} org.springframework.boot.loader.JarLauncher"
+TOML
