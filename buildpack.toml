@@ -2,7 +2,7 @@ api = "0.2"
 
 [buildpack]
 id = "heroku/spring-boot"
-version = "0.1"
+version = "0.2"
 name = "Spring-Boot"
 
 [[stacks]]
