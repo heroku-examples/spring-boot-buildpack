@@ -36,7 +36,7 @@ jobs:
                 echo "::set-output name=digest::$DIGEST"
               shell: bash
               env:
-                PACKAGE: ghcr.io/${{ github.repository_owner }}/buildpacks/spring-boot
+                PACKAGE: ghcr.io/${{ github.repository_owner }}/buildpacks/heroku_spring-boot
             - id: register
               name: Register Buildpack
               uses: docker://ghcr.io/buildpacks/actions/registry:main
@@ -44,4 +44,4 @@ jobs:
                 token:   ${{ secrets.PUBLIC_REPO_TOKEN }}
                 id:      heroku/spring-boot
                 version: ${{ steps.package.outputs.version }}
-                address: ghcr.io/heroku-examples/buildpacks/spring-boot@${{ steps.package.outputs.digest }}
+                address: ghcr.io/heroku-examples/buildpacks/heroku_spring-boot@${{ steps.package.outputs.digest }}
